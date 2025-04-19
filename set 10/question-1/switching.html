@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Switch</title>
+    <script>
+        function switchImage(id, src) {
+            document.getElementById(id).src = src;
+        }
+    </script>
+</head>
+<body>
+    <h2>Hover over the image!</h2>
+    <img id="pic" src="image1.jpg" width="300"
+        onmouseover="switchImage('pic', 'image2.jpg')"
+        onmouseout="switchImage('pic', 'image1.jpg')">
+</body>
+</html>

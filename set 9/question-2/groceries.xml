@@ -1,0 +1,18 @@
+<groceries>
+    <customer>
+        <number>101</number>
+        <item>Rice</item>
+        <quantity>2kg</quantity>
+    </customer>
+    <customer>
+        <number>102</number>
+        <item>Milk</item>
+        <quantity>1L</quantity>
+    </customer>
+    <customer>
+        <number>103</number>
+        <item>Fruits</item>
+        <quantity>5kg</quantity>
+    </customer>
+    <!-- Add 2 more here -->
+</groceries>

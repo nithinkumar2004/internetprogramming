@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary</title>
+    <script>
+        function calculateSalary() {
+            let basic = parseFloat(document.getElementById("basic").value);
+            let da = 0.1 * basic;
+            let hra = 0.15 * basic;
+            let pf = 0.12 * basic;
+            let tax = 0.05 * basic;
+            let gross = basic + da + hra;
+            let deduction = pf + tax;
+            let net = gross - deduction;
+
+            document.getElementById("output").innerHTML = `
+                DA: ₹${da}<br>
+                HRA: ₹${hra}<br>
+                PF: ₹${pf}<br>
+                TAX: ₹${tax}<br>
+                Gross Pay: ₹${gross}<br>
+                Deduction: ₹${deduction}<br>
+                Net Pay: ₹${net}
+            `;
+        }
+    </script>
+</head>
+<body>
+    <h2>Employee Salary Calculator</h2>
+    Basic Salary: <input type="number" id="basic"><br><br>
+    <button onclick="calculateSalary()">Calculate</button>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Details</title>
+    <script>
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                alert("Invalid Email ID");
+                return false;
+            }
+            if (age < 1 || age > 120) {
+                alert("Enter a valid age between 1 and 120");
+                return false;
+            }
+            if (!gender) {
+                alert("Please select a gender");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        Name: <input type="text" name="name"><br>
+        Age: <input type="number" id="age"><br>
+        Email: <input type="text" id="email"><br>
+        Gender:
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

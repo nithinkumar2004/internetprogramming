@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking</title>
+</head>
+<body>
+    <script>
+        if (sessionStorage.pagecount) {
+            sessionStorage.pagecount = Number(sessionStorage.pagecount) + 1;
+        } else {
+            sessionStorage.pagecount = 1;
+        }
+        document.write("You have visited this page " + sessionStorage.pagecount + " times in this session.");
+    </script>
+</body>
+</html>

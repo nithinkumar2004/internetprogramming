@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Survey</title>
+</head>
+<body>
+    <h2>Customer Feedback Survey</h2>
+    <form action="SurveyServlet" method="post">
+        Name: <input type="text" name="name" required><br><br>
+        Rating: 
+        <select name="rating">
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select><br><br>
+        Feedback:<br>
+        <textarea name="feedback" rows="5" cols="30"></textarea><br><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+</body>
+</html>
